@@ -7,10 +7,13 @@ io.on('connection', (client) => {
             client.emit('timer', new Date());
         }, interval);
     });
+
+    client.on('addMessage', (message) =>{
+       console.log('client added message ', message);
+    });
 });
 
 const port = 8000;
-io.listen(port, (error)=>{
-    if(error) throw error;
-    console.log('listening on port ', port);
-});
+io.listen(port);
+console.log('listening on port ', port);
+
