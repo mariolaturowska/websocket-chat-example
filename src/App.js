@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState,useEffect} from 'react';
 import './App.css';
+import {subscribeToTimer} from './api';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [timer, setTimer] = useState('');
+
+    useEffect(() =>{
+        subscribeToTimer((err, timestamp) => {
+            setTimer(timestamp);
+        });
+    }, [timer]);
+
+    return (
+        <div className="App">
+            <p>
+                This is the timer value: {timer}
+            </p>
+        </div>
+    );
+};
 
 export default App;
+
