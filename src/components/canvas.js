@@ -4,44 +4,52 @@ const HOOK_SVG =  'm129.03125 63.3125c0-34.914062-28.941406-63.3125-64.519531-63
 const HOOK_PATH = new Path2D(HOOK_SVG);
 const SCALE = 0.3;
 const OFFSET = 80;
-const draw = (ctx, location) => {
-    ctx.fillStyle = 'deepskyblue';
-    ctx.shadowColor = 'dodgerblue';
-    ctx.shadowBlur = 20;
-    ctx.save();
-    ctx.scale(SCALE, SCALE);
-    ctx.translate(location.x / SCALE - OFFSET, location.y / SCALE - OFFSET);
-    ctx.fill(HOOK_PATH);
-    ctx.restore();
+const draw = (ctx, originalMousePosition,newMousePosition) => {
+    ctx.strokeStyle ='black';
+    ctx.lineJoin='round';
+    ctx.lineWidth = '2';
+    ctx.beginPath();
+    ctx.moveTo(originalMousePosition.x, originalMousePosition.y);
+    ctx.lineTo(newMousePosition.x,newMousePosition.y);
+    ctx.closePath();
+    ctx.stroke();
 };
 const CanvasComponent = () =>{
-    const [locations, setLocations] = useState([]);
+    const [mousePosition, setMousePosition] = useState([]);
+    const [lastMousePosition,setLastMousePosition] = useState(undefined);
+    const [isPainting, setIsPainting] = useState(false);
     const canvasRef = useRef(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, window.innerHeight, window.innerWidth);
-        locations.forEach(location => draw(ctx, location))
+        mousePosition.forEach(location => draw(ctx, location, lastMousePosition))
     });
 
-    const handleCanvasClick = (e) => {
+    const handleCanvasMouseUp = (e) =>{
         const newLocation = { x: e.clientX, y: e.clientY };
-        setLocations([...locations, newLocation]);
+        console.log('newloc', newLocation);
+        setMousePosition([...mousePosition,newLocation]);
+        setIsPainting(true);
     };
 
-    const handleClear = () => {
-        setLocations([])
+    const handleCanvasMouseDown = (e) =>{
+        const lastLocation = { x: e.clientX, y: e.clientY };
+        console.log('nlastloc', lastLocation);
+        setLastMousePosition(lastLocation);
+        setIsPainting(false);
     };
 
     return (
         <>
-            <button onClick={handleClear}>Clear</button>
             <canvas
                 ref={canvasRef}
                 width={window.innerWidth}
                 height={window.innerHeight}
-                onClick={handleCanvasClick}
+                onMouseUp={e => handleCanvasMouseUp(e)}
+                onMouseMove={e => handleCanvasMouseUp(e)}
+                onMouseDown={e => handleCanvasMouseDown(e)}
             />
         </>
     )
