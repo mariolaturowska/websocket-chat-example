@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc341552-82f8-435c-8a36-0e6535746016" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/canvasContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/colorContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,22 +23,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/mariolaturowska/websocket-exercise-chat-example.git" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1Vk5KnidoVyXiDrbEoh9xeFFexX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/contexts" />
+      <recent name="$PROJECT_DIR$/src/scss" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -46,6 +72,8 @@
       <updated>1577784190301</updated>
       <workItem from="1577784191451" duration="19348000" />
       <workItem from="1577965696557" duration="1571000" />
+      <workItem from="1578075829184" duration="5347000" />
+      <workItem from="1578146481106" duration="15079000" />
     </task>
     <servers />
   </component>
@@ -64,5 +92,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1577999400417">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1577999400417" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578159627913">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578159627913" />
   </component>
 </project>

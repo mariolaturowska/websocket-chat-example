@@ -1,14 +1,10 @@
 import React from 'react';
-import './App.css';
-import Message from "./components/message";
-import CanvasComponent from "./components/canvas";
+import './scss/App.css';
+import Main from "./components/main";
 
 const App = () => {
     return (
-        <div className="App">
-            <CanvasComponent/>
-            <Message/>
-        </div>
+        <Main/>
     );
 };
 
