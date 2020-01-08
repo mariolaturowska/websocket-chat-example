@@ -29,17 +29,17 @@ const Message = () => {
             <ColorContext.Consumer>{(colorContext) => {
                 const {fontColor, colors} = colorContext;
                 return (
-                    <div>
-                        <div className ='messages-area'>
+                    <div className='messages-area'>
+                        <div>
                             {!!messages && messages.map((e, i) => {
                                 return (
-                                    <div key={i}>
-                                        <p>{e.time}</p>
-                                        <p style={{color: e.color}}>{e.text}</p>
+                                    <div key={i} className='messages-area-one'>
+                                        <p className ='message-one-time'>{e.time}</p>
+                                        <p style={{color: e.color}} className='message-one-text'>{e.text}</p>
                                     </div>)
                             })}
                         </div>
-                        <div>
+                        <div className='buttons-color-area'>
                             {colors.map((color, i) => {
                                 return (
                                     <Color key={i} color={color}/>

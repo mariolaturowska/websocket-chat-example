@@ -1,26 +1,54 @@
-.circle{
-  border-radius:100%;
-  width:15px;
-  height:15px;
-  background-color:red
+.circle {
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background-color: red
 }
 
-.main{
-  background-color:yellow;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  width:100vw
+.main {
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw
 }
 
-.phone-area{
-  width:25%;
-  height:50%;
-  background-color:white
+.phone-area {
+    flex-basis: 25%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center
 }
 
-.messages-area{
-  height:50%;
-  width:100%;
+.messages-area {
+    height: 50%;
+    width: 100%;
+    text-align: center
+}
+
+.messages-area-one {
+    margin-top: 2%;
+    background-color: ghostwhite;
+    width: 70%;
+    border-radius: 1%;
+    display: inline-block
+}
+
+.message-one-text{
+  font-size: 0.8em;
+}
+
+.message-one-time{
+  font-size:1em;
+  font-weight: bold;
+  font-style: italic;
+  color:darkslateblue;
+}
+
+.buttons-color-area {
+    display: flex;
+    justify-content: center
 }

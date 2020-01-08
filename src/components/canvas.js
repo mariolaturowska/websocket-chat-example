@@ -10,8 +10,8 @@ const CanvasComponent = () => (
             return (
                 <canvas
                     ref={canvasRef}
-                    width={window.innerWidth / 2}
-                    height={window.innerHeight / 2}
+                    width={window.innerWidth / 8}
+                    height={window.innerHeight / 8}
                     onMouseUp={e => handleCanvasMouseUp(e)}
                     onMouseLeave={e => handleCanvasMouseUp(e)}
                     onMouseMove={e => handleCanvasMouseMove(e, fontColor)}

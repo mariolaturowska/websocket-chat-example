@@ -13,7 +13,7 @@ const CanvasContextProvider = (props) => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, window.innerHeight / 2, window.innerWidth / 2);
+        ctx.clearRect(0, 0, window.innerHeight / 5, window.innerWidth / 5);
         mousePosition.forEach(location => draw(ctx, location.start, location.stop, location.color))
     }, [mousePosition]);
 
