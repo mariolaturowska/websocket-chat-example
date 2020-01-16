@@ -3,7 +3,6 @@ import {addMessage, broadcastMessage} from '../api';
 import Color from "./color";
 import {ColorContext} from '../contexts/colorContext';
 import CanvasComponent from "./canvas";
-import {IoMdBrush,IoIosSend} from "react-icons/io";
 
 let moment = require('moment');
 const Message = () => {
@@ -30,8 +29,8 @@ const Message = () => {
             <ColorContext.Consumer>{(colorContext) => {
                 const {fontColor, colors} = colorContext;
                 return (
-                    <div>
-                        <div className ='messages-area'>
+                    <div className='messages-area'>
+                        <div>
                             {!!messages && messages.map((e, i) => {
                                 return (
                                     <div key={i} className='messages-area-one'>
@@ -40,7 +39,6 @@ const Message = () => {
                                     </div>)
                             })}
                         </div>
-                        <div className='screen-area'>
                         <div className='buttons-color-area'>
                             {colors.map((color, i) => {
                                 return (
@@ -48,18 +46,13 @@ const Message = () => {
                                 )
                             })
                             }
-                            <IoMdBrush size='1.5em' color='grey'/>
                         </div>
                         <input value={singleMes}
                                placeholder="Type your message here..."
                                style={{color: fontColor}}
-                               className='input-styling'
-                               onChange={event => setSingleMes(event.target.value)}>
-
-                        </input>
-                            <IoIosSend onClick={() => clickHandler(fontColor)} color='grey' size='1.5em'/>
+                               onChange={event => setSingleMes(event.target.value)}/>
                         <CanvasComponent/>
-                        </div>
+                        <button onClick={() => clickHandler(fontColor)}>Submit</button>
                     </div>)
             }}
             </ColorContext.Consumer>
