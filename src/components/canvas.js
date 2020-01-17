@@ -10,8 +10,9 @@ const CanvasComponent = () => (
             return (
                 <canvas
                     ref={canvasRef}
-                    width={window.innerWidth / 8}
-                    height={window.innerHeight / 8}
+                    width={150}
+                    height={50}
+                    className='canvas-area'
                     onMouseUp={e => handleCanvasMouseUp(e)}
                     onMouseLeave={e => handleCanvasMouseUp(e)}
                     onMouseMove={e => handleCanvasMouseMove(e, fontColor)}

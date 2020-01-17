@@ -1,8 +1,16 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 .circle {
     border-radius: 100%;
     width: 15px;
     height: 15px;
-    background-color: red
+    outline:none;
+    border: none;
 }
 
 .main {
@@ -11,44 +19,105 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw
+    width: 100vw;
+    overflow:hidden;
 }
 
 .phone-area {
     flex-basis: 25%;
-    height: 50%;
+    height: 75%;
     background-color: white;
     display: flex;
     align-items: flex-end;
-    justify-content: center
+    justify-content: center;
+    position:relative;
+    padding-bottom:2%
 }
 
 .messages-area {
-    height: 50%;
+    padding-top:3%;
+    height: 70%;
     width: 100%;
-    text-align: center
+    overflow-y:auto;
+    overflow-x: hidden;
+    text-align: center;
+    position:absolute;
+    bottom:30%;
+    right:0;
 }
 
 .messages-area-one {
-    margin-top: 2%;
-    background-color: ghostwhite;
+    margin-top:1%;
     width: 70%;
-    border-radius: 1%;
-    display: inline-block
+    padding-top:2%;
+    border-radius: 5%;
+    display: inline-block;
 }
 
 .message-one-text{
-  font-size: 0.8em;
+    font-size: 0.8em;
+    background-color: #DDDDDD;
+    text-align:left;
+    border-radius: 6px 6px 6px 0;
+    padding:3% 2% 3% 2%;
+    word-wrap: break-word;
 }
 
 .message-one-time{
-  font-size:1em;
-  font-weight: bold;
-  font-style: italic;
-  color:darkslateblue;
+    font-size:0.7em;
+    font-weight: bold;
+    font-style: italic;
+    color:grey;
+    margin-bottom:2%;
 }
 
+.message-one-time:hover{
+    color:lightslategrey;
+}
+
+.screen-area{
+    border-top:1px solid lightgray;
+    width: 100%;
+    height:30%;
+    position:absolute;
+    top:70%;
+    right:0;
+    flex-wrap:wrap
+}
 .buttons-color-area {
     display: flex;
-    justify-content: center
+    align-self:flex-start;
+    padding:5% 0 1% 0;
+    width:60%;
+
 }
+
+.input-write-and-canvas-area{
+    display: flex;
+    justify-content: center;
+    width:60%;
+    position:relative;
+    border:1px solid lightgray;
+    border-radius:10px;
+    flex-wrap:wrap;
+    padding-top:2%;
+    padding-bottom:2%;
+    font-size:0.7em;
+}
+
+.content-editable-input{
+    width:100%;
+    border:none;
+    height:30%;
+    outline: none
+}
+
+.canvas-area{
+    border: 1px dotted lightgrey;
+}
+.submit-button{
+    position:absolute;
+    bottom:7%;
+    right:2%;
+}
+
