@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc341552-82f8-435c-8a36-0e6535746016" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/messages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/screen_area.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/get_server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contexts/canvasContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/canvasContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/colorContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/colorContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,15 +49,15 @@
       <recent name="$PROJECT_DIR$/src/scss" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -73,6 +76,9 @@
       <workItem from="1578075829184" duration="5347000" />
       <workItem from="1578146481106" duration="15079000" />
       <workItem from="1579249128214" duration="21906000" />
+      <workItem from="1579282006893" duration="9870000" />
+      <workItem from="1579364373642" duration="6518000" />
+      <workItem from="1579372594349" duration="3675000" />
     </task>
     <servers />
   </component>
@@ -93,10 +99,18 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="303" y="142" width="749" height="439" key="EditFileWatcherDialog" timestamp="1579289631642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="303" y="142" width="749" height="439" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1579289631642" />
     <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1577999400417">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1577999400417" />
+    <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579374917233">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1579374917233" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578159627913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

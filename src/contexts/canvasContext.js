@@ -1,4 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
+import {broadcastMessage} from "../api";
+let moment = require('moment');
 
 export const CanvasContext = React.createContext();
 
@@ -8,7 +10,8 @@ const CanvasContextProvider = (props) => {
     const [isPainting, setIsPainting] = useState(false);
     const [mousePosition, setMousePosition] = useState([]);
     const [canvasImage, setCanvasImage] = useState('');
-
+    const [canvasDisplaying, setCanvasDisplaying] = useState(false);
+    const [singleMes, setSingleMes] = useState('');
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -18,6 +21,27 @@ const CanvasContextProvider = (props) => {
         ctx.clearRect(0, 0, window.innerHeight / 10, window.innerWidth / 10);
         mousePosition.forEach(location => draw(ctx, location.start, location.stop, location.color));
     }, [mousePosition]);
+
+    const clickHandler = (fontColor, canvasImage, canvasRef, clearCanvasImage) => {
+        (singleMes || canvasImage) !== "" && broadcastMessage({
+            author: 'mariola',
+            text: singleMes,
+            canvasImage: canvasImage,
+            time: moment().calendar(),
+            color: fontColor
+        });
+        setSingleMes('');
+        setCanvasDisplaying(false);
+        let canvas;
+        let ctx;
+        if (canvasRef.current !== null) {
+            canvas = canvasRef.current;
+            ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, 150, 50);
+            clearCanvasImage();
+        }
+
+    };
 
     const handleCanvasMouseDown = ({nativeEvent}) => {
         const {offsetX, offsetY} = nativeEvent;
@@ -61,6 +85,8 @@ const CanvasContextProvider = (props) => {
     };
 
     const clearCanvasImage = () => setCanvasImage('');
+    const handleCanvasDisplaying = (arg) => setCanvasDisplaying(arg);
+    const handleSingleMes = (mes) => setSingleMes(mes);
 
     return (
         <CanvasContext.Provider value={{
@@ -68,10 +94,15 @@ const CanvasContextProvider = (props) => {
             lastMousePosition,
             isPainting,
             canvasImage,
+            canvasDisplaying,
+            singleMes,
             handleCanvasMouseDown,
             handleCanvasMouseMove,
             handleCanvasMouseUp,
-            clearCanvasImage
+            clearCanvasImage,
+            clickHandler,
+            handleCanvasDisplaying,
+            handleSingleMes
         }}>
             {props.children}
         </CanvasContext.Provider>

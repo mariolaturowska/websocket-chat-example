@@ -1,9 +1,30 @@
 const io = require('socket.io')();
+const mysql = require('mysql');
+const con = mysql.createConnection({
+    host: "localhost",
+    user: "mariola",
+    password: "qaz123QAZ!@#",
+    database: 'messages'
+});
 
-io.on('connection', (client) => {
-    client.on("broadcast message", msg => {
-        console.log('added new message ', msg);
-        io.emit("chat message", msg);
+con.connect((err) => {
+
+    if (err) throw err;
+    console.log("Connected!");
+
+    io.on('connection', (client) => {
+        client.on("broadcast message", msg => {
+            console.log('added new message ', msg);
+
+            io.emit("chat message", msg);
+            const sql = "INSERT INTO messages (author, message,image, time, color) VALUES ('" + msg.author + "','" + msg.text + "','" + msg.canvasImage + "','" + msg.time + "','" + msg.color + "')";
+
+            con.query(sql, (err, result) => {
+                if (err) throw err;
+                console.log("1 record inserted");
+            });
+
+        });
     });
 });
 
