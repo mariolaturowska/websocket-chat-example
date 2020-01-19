@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
-    scroll-behavior: smooth;
 }
 
 .circle {
@@ -39,15 +38,14 @@
     align-items: flex-end;
     justify-content: center;
     position:relative;
-    padding-bottom:2%
+    margin-bottom:2%;
+    border-radius:5px
 }
 
 .messages-area {
     padding-top:3%;
     height: 70%;
     width: 100%;
-    overflow-y:auto;
-    overflow-x: hidden;
     text-align: center;
     position:absolute;
     bottom:30%;
