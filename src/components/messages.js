@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {MessagesContext} from "../contexts/messagesContext";
 import 'react-custom-scroll/dist/customScroll.css';
 import CustomScroll from 'react-custom-scroll';
@@ -6,7 +6,7 @@ import CustomScroll from 'react-custom-scroll';
 const Messages = () => {
     return (
         <MessagesContext.Consumer>{(messagesContext) => {
-            const {messages} = messagesContext;
+            const {messages, typingMessage} = messagesContext;
             return (
 
                     <div className='messages-area'>
@@ -15,6 +15,7 @@ const Messages = () => {
                             return (
                                 <div key={i} className='messages-area-one'>
                                     <p className='message-one-time'>{e.time}</p>
+                                    <div className ='name-area'>name</div>
                                     <div className={!!e.canvasImage ? 'message-one-text-with-canvas' : 'message-one-text'}>
                                         <p style={{color: e.color}}>{e.text}</p>
                                         {!!e.canvasImage && <img src={e.canvasImage} className='canvas-image-style'/>}
@@ -22,6 +23,7 @@ const Messages = () => {
                                     {!!e.canvasImage && <p className='message-delivered'>Delivered</p>}
                                 </div>)
                         })}
+                        <div>{typingMessage}</div>
                         </CustomScroll>
                     </div>
 
@@ -32,5 +34,3 @@ const Messages = () => {
 };
 
 export default Messages;
-
-//<div ref={messagesArea}/>

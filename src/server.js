@@ -25,7 +25,13 @@ con.connect((err) => {
             });
 
         });
+
+        client.on("message received", (msg) => {
+            console.log("Message received : " + msg);
+            io.broadcast.emit("add message", msg);
+        });
     });
+
 });
 
 const port = 8000;

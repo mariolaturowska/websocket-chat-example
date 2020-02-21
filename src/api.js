@@ -9,5 +9,12 @@ function broadcastMessage(msg){
     socket.emit('broadcast message', msg);
 }
 
+function informUser(cb){
+    socket.on('add message', msg => cb(null,msg))
+}
 
-export {addMessage,broadcastMessage}
+function addInfoToUser(msg){
+    socket.emit('message received', msg);
+}
+
+export {addMessage,broadcastMessage, informUser, addInfoToUser}

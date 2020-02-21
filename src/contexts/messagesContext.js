@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {addMessage, broadcastMessage} from "../api";
+import {addMessage, broadcastMessage, informUser, addInfoToUser} from "../api";
 const url = 'http://localhost:8080/messages';
 let moment = require('moment');
 
@@ -10,6 +10,7 @@ const MessagesContextProvider = (props)=>{
     const [loaded, setLoaded] = useState(false);
     const [singleMes, setSingleMes] = useState('');
     const [canvasDisplaying, setCanvasDisplaying] = useState(false);
+    const [typingMessage, setTypingMessage] = useState('');
 
     useEffect(() => {
         let data;
@@ -24,6 +25,14 @@ const MessagesContextProvider = (props)=>{
         }
         addMessage((err, msg) => {
             setMessages([...messages, msg]);
+        });
+
+        informUser((err, msg)=>{
+            setTypingMessage(msg);
+            setTimeout(() => {
+                setTypingMessage('');
+            },1000)
+
         });
     });
 
@@ -52,14 +61,18 @@ const MessagesContextProvider = (props)=>{
 
     const handleCanvasDisplaying = (arg) => setCanvasDisplaying(arg);
 
+    const handleInfoToUser = () => addInfoToUser('is typing');
+
     return (
         <MessagesContext.Provider value={{
             messages,
             singleMes,
+            typingMessage,
             canvasDisplaying,
             handleSingleMes,
             clickHandler,
-            handleCanvasDisplaying
+            handleCanvasDisplaying,
+            handleInfoToUser
         }}>
             {props.children}
         </MessagesContext.Provider>

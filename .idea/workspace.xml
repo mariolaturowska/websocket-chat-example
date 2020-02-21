@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc341552-82f8-435c-8a36-0e6535746016" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/buttons-color-area.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contexts/messagesContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screen_area.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screen_area.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/canvasContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/canvasContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/get_server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/get_server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/messagesContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/messagesContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
@@ -81,7 +78,16 @@
       <workItem from="1579364373642" duration="6518000" />
       <workItem from="1579372594349" duration="3675000" />
       <workItem from="1579376682838" duration="651000" />
-      <workItem from="1579436375940" duration="23561000" />
+      <workItem from="1579436375940" duration="24302000" />
+      <workItem from="1581176847306" duration="1408000" />
+      <workItem from="1581178748373" duration="947000" />
+      <workItem from="1581270924517" duration="1788000" />
+      <workItem from="1581273223499" duration="1791000" />
+      <workItem from="1581275052268" duration="1785000" />
+      <workItem from="1581276865891" duration="1323000" />
+      <workItem from="1581450840767" duration="960000" />
+      <workItem from="1581452655192" duration="2384000" />
+      <workItem from="1581867648618" duration="11000" />
     </task>
     <servers />
   </component>
@@ -110,10 +116,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="303" y="142" width="749" height="439" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1579289631642" />
-    <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1579376722001">
+    <state x="466" y="121" width="424" height="482" key="FileChooserDialogImpl" timestamp="1581867657816">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579376722001" />
+    <state x="466" y="121" width="424" height="482" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581867657816" />
+    <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1579463918451">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="278" y="99" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579463918451" />
     <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579374917233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
