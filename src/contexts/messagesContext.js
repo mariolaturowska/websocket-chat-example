@@ -36,9 +36,9 @@ const MessagesContextProvider = (props)=>{
         });
     });
 
-    const clickHandler = (fontColor, canvasImage, canvasRef, clearCanvasImage) => {
+    const clickHandler = (fontColor, canvasImage, canvasRef, clearCanvasImage, name) => {
         (singleMes || canvasImage) !== "" && broadcastMessage({
-            author: 'mariola',
+            author: name,
             text: singleMes,
             canvasImage: canvasImage,
             time: moment().calendar(),
@@ -61,7 +61,7 @@ const MessagesContextProvider = (props)=>{
 
     const handleCanvasDisplaying = (arg) => setCanvasDisplaying(arg);
 
-    const handleInfoToUser = () => addInfoToUser('is typing');
+    const handleInfoToUser = () => addInfoToUser('is typing...');
 
     return (
         <MessagesContext.Provider value={{

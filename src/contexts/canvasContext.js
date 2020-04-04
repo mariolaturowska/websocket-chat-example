@@ -1,6 +1,4 @@
 import React, {useEffect, useRef, useState} from "react";
-import {broadcastMessage} from "../api";
-
 
 export const CanvasContext = React.createContext();
 
