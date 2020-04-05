@@ -17,7 +17,7 @@ con.connect((err) => {
             console.log('added new message ', msg);
 
             io.emit("chat message", msg);
-            const sql = "INSERT INTO messages (author, text, time, color,canvasImage) VALUES ('" + msg.author + "','" + msg.text + "','" + msg.time + "','" + msg.color + "','" + msg.canvasImage + "')";
+            const sql = "INSERT INTO messages (authorName, authorSurname, text, time, color,canvasImage) VALUES ('" + msg.authorName + "','" + msg.authorSurname + "','" + msg.text + "','" + msg.time + "','" + msg.OneButtonColorArea + "','" + msg.canvasImage + "')";
 
             con.query(sql, (err, result) => {
                 if (err) throw err;

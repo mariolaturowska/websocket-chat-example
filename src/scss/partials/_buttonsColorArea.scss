@@ -1,0 +1,18 @@
+.circle {
+  @include width-height(1em, 1em);
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    @include width-height(16px, 16px);
+  }
+}
+
+.buttons-color-area {
+  display: flex;
+  align-self: flex-start;
+  padding: 5% 0 1% 0;
+  width: 60%;
+}

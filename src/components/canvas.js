@@ -22,5 +22,4 @@ const CanvasComponent = () => (
     </CanvasContext.Consumer>
 );
 
-
 export default CanvasComponent;

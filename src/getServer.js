@@ -21,8 +21,8 @@ con.connect((err) => {
             if (err) throw err;
             res.status(200);
             res.setHeader('Content-type', 'application/json');
-            result.forEach( (element) => {
-                resultArray.push({...element,canvasImage: element.canvasImage.toString('ascii')});
+            result.forEach((element) => {
+                resultArray.push({...element, canvasImage: element.canvasImage.toString('ascii')});
             });
             return res.send(resultArray);
         });

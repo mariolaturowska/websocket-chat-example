@@ -11,11 +11,11 @@ const CanvasContextProvider = (props) => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
-        if(canvasRef) return;
+        if (canvasRef) return;
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, window.innerHeight / 10, window.innerWidth / 10);
-        mousePosition.forEach(location => draw(ctx, location.start, location.stop, location.color));
+        mousePosition.forEach(location => draw(ctx, location.start, location.stop, location.OneButtonColorArea));
     }, [mousePosition]);
 
 
@@ -36,7 +36,7 @@ const CanvasContextProvider = (props) => {
                 stop: {...offSetData},
                 color: fontColor
             }]);
-            draw(ctx, canvas,lastMousePosition, offSetData, fontColor);
+            draw(ctx, canvas, lastMousePosition, offSetData, fontColor);
         }
     };
 
@@ -46,7 +46,7 @@ const CanvasContextProvider = (props) => {
         }
     };
 
-    const draw = (ctx, canvas,originalMousePosition, newMousePosition, fontColor) => {
+    const draw = (ctx, canvas, originalMousePosition, newMousePosition, fontColor) => {
         const {offsetX, offsetY} = newMousePosition;
         const {offsetX: x, offsetY: y} = originalMousePosition;
         ctx.strokeStyle = fontColor;

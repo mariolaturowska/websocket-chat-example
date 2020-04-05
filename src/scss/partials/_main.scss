@@ -1,0 +1,26 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.main {
+  @include flexbox;
+  @include width-height(100vw,100vh);
+  background-color: lightblue;
+  overflow: hidden;
+}
+
+.phone-area {
+  flex-basis: 25%;
+  height: 75%;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2%;
+  border-radius: 6px;
+  box-shadow: -8px 5px 7px grey;
+}

@@ -1,0 +1,10 @@
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin width-height($property,$nextProperty) {
+  width: $property;
+  height: $nextProperty
+}

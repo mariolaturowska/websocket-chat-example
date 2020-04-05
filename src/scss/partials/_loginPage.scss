@@ -1,0 +1,53 @@
+.login-page-wrapper {
+  @include flexbox;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 5vh;
+  box-shadow: 5px 5px 10px darken($light-grey-color, 40%);
+
+  .welcome-page {
+    color: #3e3e3e;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+
+  .login-input, .submit-input {
+    @include flexbox;
+    flex-wrap: wrap;
+    @include width-height(100%,10vh);
+    margin-bottom: 1vh;
+  }
+
+  input {
+    @include width-height(80%,80%);
+    outline: none;
+    border: none;
+    background-color: $light-grey-color;
+    padding: 1vw
+
+  }
+
+  ::placeholder {
+    padding-top: 1vw;
+    color: darken($light-grey-color, 30%);
+  }
+
+  input[type='text']:focus {
+    border: 1px solid lightseagreen;
+    box-shadow: 0 0 5px lightseagreen
+  }
+
+  input[type="submit"] {
+    background-color: darken($light-grey-color, 70%);
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+
+    &:hover {
+      background-color: darken($light-grey-color, 60%);
+    }
+  }
+
+}

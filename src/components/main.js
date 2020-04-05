@@ -4,31 +4,27 @@ import CanvasContextProvider from "../contexts/canvasContext";
 import Message from "./message";
 import MessagesContextProvider from "../contexts/messagesContext";
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
-import LoginPage from './login_page.js';
+import LoginPage from './loginPage.js';
 import LoginContextProvider from "../contexts/loginContext";
 
 const Main = () => {
     return (
-
         <div className="main">
-
             <ColorContextProvider>
                 <LoginContextProvider>
-                <CanvasContextProvider>
-                    <MessagesContextProvider>
-                        <Router>
-                            <Switch>
-                                <Route exact path="/" component={LoginPage}/>
-                                <Route path="/messages" component={Message}/>
-                            </Switch>
-                        </Router>
-                    </MessagesContextProvider>
-                </CanvasContextProvider>
+                    <CanvasContextProvider>
+                        <MessagesContextProvider>
+                            <Router>
+                                <Switch>
+                                    <Route exact path="/" component={LoginPage}/>
+                                    <Route path="/messages" component={Message}/>
+                                </Switch>
+                            </Router>
+                        </MessagesContextProvider>
+                    </CanvasContextProvider>
                 </LoginContextProvider>
             </ColorContextProvider>
-
         </div>
-
     )
 };
 

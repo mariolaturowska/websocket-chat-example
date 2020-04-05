@@ -1,5 +1,5 @@
 import React from 'react';
-import Color from "./color";
+import OneButtonColorArea from "./oneButtonColorArea";
 import {IoIosBrush} from "react-icons/io";
 import {ColorContext} from "../contexts/colorContext";
 import {MessagesContext} from "../contexts/messagesContext";
@@ -13,12 +13,14 @@ const ButtonsArea = () => (
                 <div className='buttons-color-area'>
                     {colors.map((color, i) => {
                         return (
-                            <Color key={i} color={color}/>
+                            <OneButtonColorArea key={i} color={color}/>
                         )
                     })
                     }
                     <IoIosBrush color='grey' style={{cursor: 'pointer'}}
-                                onClick={() => canvasDisplaying ? handleCanvasDisplaying(false) : handleCanvasDisplaying(true)}/>
+                                onClick={() => canvasDisplaying
+                                    ? handleCanvasDisplaying(false)
+                                    : handleCanvasDisplaying(true)}/>
                 </div>
             )
         }}

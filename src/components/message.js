@@ -1,6 +1,6 @@
 import React from 'react';
 import Messages from "./messages";
-import ScreenArea from "./screen_area";
+import ScreenArea from "./screenArea";
 
 const Message = () => {
     return (

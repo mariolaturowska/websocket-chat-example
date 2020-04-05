@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {addMessage, broadcastMessage, informUser, addInfoToUser} from "../api";
+
 const url = 'http://localhost:8080/messages';
 let moment = require('moment');
 
 export const MessagesContext = React.createContext();
 
-const MessagesContextProvider = (props)=>{
+const MessagesContextProvider = (props) => {
     const [messages, setMessages] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [singleMes, setSingleMes] = useState('');
@@ -14,7 +15,7 @@ const MessagesContextProvider = (props)=>{
 
     useEffect(() => {
         let data;
-        if(!loaded){
+        if (!loaded) {
             (async () => {
                 const res = await fetch(url);
                 data = await res.json();
@@ -27,18 +28,19 @@ const MessagesContextProvider = (props)=>{
             setMessages([...messages, msg]);
         });
 
-        informUser((err, msg)=>{
+        informUser((err, msg) => {
             setTypingMessage(msg);
             setTimeout(() => {
                 setTypingMessage('');
-            },1000)
+            }, 1000)
 
         });
     });
 
-    const clickHandler = (fontColor, canvasImage, canvasRef, clearCanvasImage, name) => {
+    const clickHandler = (fontColor, canvasImage, canvasRef, clearCanvasImage, name, surname) => {
         (singleMes || canvasImage) !== "" && broadcastMessage({
-            author: name,
+            authorName: name,
+            authorSurname: surname,
             text: singleMes,
             canvasImage: canvasImage,
             time: moment().calendar(),

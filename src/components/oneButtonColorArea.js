@@ -1,7 +1,7 @@
 import React from 'react';
 import {ColorContext} from '../contexts/colorContext';
 
-const Color = ({color}) =>{
+const OneButtonColorArea = ({color}) =>{
     return (
         <ColorContext.Consumer>{(colorContext) => {
             const {changeFontColor} = colorContext;
@@ -15,4 +15,4 @@ const Color = ({color}) =>{
     )
 };
 
-export default Color;
+export default OneButtonColorArea;
