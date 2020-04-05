@@ -7,6 +7,7 @@ Installation of all dependencies using npm.
 * React,
 * Context Api,
 * Node.js,
+* MySQL,
 * socket.io,
 * EcmaScript 6,
 * SASS, CSS3, HTML,
